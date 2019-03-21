@@ -23,7 +23,7 @@
       <div layout layout-align="space-between center">
         <md-checkbox style="margin-bottom: 0" class="md-title" ng-model="step.done">Выполнено</md-checkbox>
         <md-button class="md-fab md-mini md-warn" ng-click="removeStep($index)">
-          <md-icon class="material-icons">clear</md-icon>
+          <md-icon>clear</md-icon>
         </md-button>
       </div>
       <md-input-container class="md-block md-title">
@@ -38,13 +38,13 @@
             <input type="number" ng-model="item[1]" placeholder="Стоимость" autocomplete="off" md-select-on-focus>
           </md-input-container>
           <md-button class="md-fab md-mini md-raised" ng-click="removeItem($parent.$index, $index)">
-            <md-icon class="material-icons">clear</md-icon>
+            <md-icon>clear</md-icon>
           </md-button>
         </div>
         <div layout layout-align="space-between center">
           <md-button class="md-fab md-mini md-primary" ng-click="addItem($index)" ng-disabled="step.items.length === 10">
             <md-tooltip>Добавить позицию</md-tooltip>
-            <md-icon class="material-icons">add</md-icon>
+            <md-icon>add</md-icon>
           </md-button>
           <h3 class="md-title items-summary" flex="20">{{ summarize(step.items ) }}</h3>
         </div>

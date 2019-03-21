@@ -1,9 +1,3 @@
-/*
-	TODO:
-	- select all on focus - done
-	- summarize steps only if "done" is set - done
-	- move currency to travel object
-*/
 var app = angular.module('app', ['ui.router', 'ngMaterial', 'ngAnimate', 'templates']);
 
 app.config(['$stateProvider', '$urlRouterProvider', '$locationProvider', '$mdThemingProvider', function($stateProvider, $urlRouterProvider, $locationProvider, $mdThemingProvider) {
@@ -16,15 +10,7 @@ app.config(['$stateProvider', '$urlRouterProvider', '$locationProvider', '$mdThe
 		templateUrl: 'partials/travel.html',
 		controller: 'TravelController'
 	});
-	$urlRouterProvider.when('/', '/home');
-	$urlRouterProvider.otherwise('/')
-	//$locationProvider.html5Mode(true);
+	$urlRouterProvider.otherwise('/');
 
 	$mdThemingProvider.theme('yellow-dark', 'default').primaryPalette('yellow').dark();
-}]);
-
-app.run(['$transitions', function($transitions) {
-	$transitions.onSuccess({}, function(trans) {
-    //
-	});
 }]);

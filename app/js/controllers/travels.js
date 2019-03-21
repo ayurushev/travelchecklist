@@ -1,6 +1,5 @@
 app.controller('TravelsController', ['$scope', 'travels', function($scope, travels) {
   $scope.travels = travels.get();
-  $scope.currency = 'EUR';
 
   $scope.allDone = function(travel) {
     let result = travel.steps.length > 0 ? true : false;
